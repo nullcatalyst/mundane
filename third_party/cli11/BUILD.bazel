@@ -1,0 +1,12 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+cc_library(
+    name = "cli11",
+    hdrs = [
+        "cli11.hpp",
+    ],
+    include_prefix = "cli11",
+    visibility = [
+        "//visibility:public",
+    ],
+)

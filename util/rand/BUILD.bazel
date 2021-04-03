@@ -1,0 +1,14 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+cc_library(
+    name = "rand",
+    hdrs = [
+        "rand.hpp",
+    ],
+    visibility = [
+        "//visibility:public",
+    ],
+    deps = [
+        "//third_party/wyhash",
+    ],
+)

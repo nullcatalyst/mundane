@@ -1,0 +1,13 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+cc_library(
+    name = "wyhash",
+    hdrs = [
+        "wyhash.h",
+        "wyhash32.h",
+    ],
+    include_prefix = "wyhash",
+    visibility = [
+        "//visibility:public",
+    ],
+)
