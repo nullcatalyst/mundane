@@ -1,0 +1,17 @@
+load("//tools:cc.bzl", "cc_library")
+
+cc_library(
+    name = "proc",
+    srcs = [
+        "proc.cpp",
+    ],
+    hdrs = [
+        "proc.hpp",
+    ],
+    visibility = [
+        "//visibility:public",
+    ],
+    deps = [
+        "//util/msg",
+    ],
+)

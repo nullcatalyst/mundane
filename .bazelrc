@@ -1,0 +1,2 @@
+build --enable_runfiles
+run --enable_runfiles

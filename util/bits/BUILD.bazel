@@ -1,0 +1,11 @@
+load("//tools:cc.bzl", "cc_library")
+
+cc_library(
+    name = "bits",
+    hdrs = [
+        "bit_flag.hpp",
+    ],
+    visibility = [
+        "//visibility:public",
+    ],
+)

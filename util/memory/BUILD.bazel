@@ -1,0 +1,12 @@
+load("//tools:cc.bzl", "cc_library")
+
+cc_library(
+    name = "memory",
+    hdrs = [
+        "ref_count.hpp",
+        "var_len_struct_ptr.hpp",
+    ],
+    visibility = [
+        "//visibility:public",
+    ],
+)

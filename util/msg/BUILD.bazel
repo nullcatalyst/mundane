@@ -1,0 +1,32 @@
+load("//tools:cc.bzl", "cc_library")
+
+cc_library(
+    name = "msg",
+    hdrs = [
+        "msg.hpp",
+    ],
+    defines = select({
+        "//:opt": [
+            "MSG_DEBUG_PRINT=0",
+        ],
+        "//conditions:default": [
+            "MSG_DEBUG_PRINT=1",
+        ],
+    }),
+    visibility = [
+        "//visibility:public",
+    ],
+)
+
+cc_library(
+    name = "assert",
+    hdrs = [
+        "assert.hpp",
+    ],
+    visibility = [
+        "//visibility:public",
+    ],
+    deps = [
+        ":msg",
+    ],
+)

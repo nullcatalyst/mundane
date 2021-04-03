@@ -1,0 +1,19 @@
+load("//tools:cc.bzl", "cc_library")
+
+cc_library(
+    name = "fs",
+    srcs = [
+        "tmp.cpp",
+    ],
+    hdrs = [
+        "file.hpp",
+        "path.hpp",
+        "tmp.hpp",
+    ],
+    visibility = [
+        "//visibility:public",
+    ],
+    deps = [
+        "//util/msg",
+    ],
+)
