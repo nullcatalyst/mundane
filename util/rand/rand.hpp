@@ -57,9 +57,9 @@ public:
       uint32_t u64_value;
       double   f64_value;
       struct {
-        unsigned sign : 1;
-        unsigned exponent : 11;
-        unsigned mantissa : 52;
+        unsigned           sign : 1;
+        unsigned           exponent : 11;
+        unsigned long long mantissa : 52;
       };
     } value;
 
