@@ -7,14 +7,14 @@ load(
 )
 
 _COPTS = select({
-    "//:windows_opt": [
-        "/std:c++latest",
-        "/EHs-c-",
-        "/GR-",
-        "/O2",
-        "/Ob3",
-        "/GL",
-    ],
+#     "//:windows_opt": [
+#         "/std:c++latest",
+#         "/EHs-c-",
+#         "/GR-",
+#         "/O2",
+#         "/Ob3",
+#         "/GL",
+#     ],
     "//:windows": [
         "/std:c++latest",
         "/EHs-c-",
@@ -46,9 +46,9 @@ _DEFINES = select({
 })
 
 _LINKOPTS = select({
-    "//:windows_opt": [
-        "/LTCG",
-    ],
+#     "//:windows_opt": [
+#         "/LTCG",
+#     ],
     "//:windows": [],
     "//:macos_opt": [
         "-flto",
